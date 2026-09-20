@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jash Events - Professional Event Planning & Coordination</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+      color: #333;
+      background: #f8f8f8;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 100%;
+    }
+
+    /* Header & Navigation */
+    header {
+      background: linear-gradient(135deg, #9c27b0 0%, #673ab7 100%);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    header p {
+      font-size: 15px;
+      opacity: 0.95;
+      margin-bottom: 1.5rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      opacity: 0.9;
+      transition: opacity 0.3s;
+      padding: 0.5rem 0;
+    }
+
+    nav a:hover {
+      opacity: 1;
+      border-bottom: 2px solid white;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .hero h2 {
+      font-size: 28px;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .hero p {
+      color: #666;
+      font-size: 16px;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      line-height: 1.8;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #9c27b0;
+      color: white;
+      padding: 12px 32px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+      box-shadow: 0 4px 8px rgba(156, 39, 176, 0.3);
+    }
+
+    .cta-button:hover {
+      background: #8e24aa;
+      box-shadow: 0 6px 12px rgba(156, 39, 176, 0.4);
+    }
+
+    /* Info Grid */
+    .info-section {
+      background: white;
+      padding: 3rem 2rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .info-card {
+      background: #f9f9f9;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      border: 1px solid #e8e8e8;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .info-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .info-card .icon {
+      font-size: 40px;
+      margin-bottom: 1rem;
+    }
+
+    .info-card h3 {
+      font-size: 18px;
+      margin-bottom: 0.75rem;
+      color: #333;
+    }
+
+    .info-card p {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* Gallery Section */
+    .gallery-section {
+      background: white;
+      padding: 3rem 2rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .gallery-section h2 {
+      font-size: 26px;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .gallery-desc {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 2rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      aspect-ratio: 1;
+      background: #e0e0e0;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Video Section */
+    .video-section {
+      background: #f8f8f8;
+      padding: 3rem 2rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .video-section h2 {
+      font-size: 26px;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+    }
+
+    .video-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .video-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .video-frame {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-info {
+      padding: 1.5rem;
+    }
+
+    .video-info h3 {
+      font-size: 16px;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    .video-info p {
+      font-size: 13px;
+      color: #666;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      background: white;
+      padding: 3rem 2rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .contact-section h2 {
+      font-size: 26px;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 12px;
+    }
+
+    .contact-icon {
+      font-size: 24px;
+      min-width: 32px;
+    }
+
+    .contact-item strong {
+      display: block;
+      font-size: 15px;
+      color: #333;
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-item p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* Booking Section */
+    .booking-section {
+      background: linear-gradient(135deg, #f3e5f5 0%, #ede7f6 100%);
+      padding: 3rem 2rem;
+      text-align: center;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .booking-section h2 {
+      font-size: 26px;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .booking-section p {
+      color: #666;
+      font-size: 16px;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #2c2c2c;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      font-size: 13px;
+    }
+
+    footer p {
+      opacity: 0.9;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 24px;
+      }
+
+      nav {
+        gap: 1rem;
+        font-size: 13px;
+      }
+
+      nav a {
+        padding: 0.25rem 0.5rem;
+      }
+
+      .hero h2,
+      .gallery-section h2,
+      .video-section h2,
+      .contact-section h2,
+      .booking-section h2 {
+        font-size: 22px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1rem;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>✨ Jash Events</h1>
+      <p>Creating unforgettable celebrations and special moments</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#videos">Videos</a>
+        <a href="#contact">Contact</a>
+        <a href="#booking">Booking</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+      <h2>Welcome to Jash Events</h2>
+      <p>We specialize in creating beautifully planned and executed events that leave lasting memories. From intimate gatherings to grand celebrations, we bring your vision to life with passion and professionalism.</p>
+      <a href="#booking" class="cta-button">Book Your Event</a>
+    </section>
+
+    <!-- Info Cards -->
+    <section class="info-section">
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="icon">🎉</div>
+          <h3>Event Planning</h3>
+          <p>Full-service event coordination and design for all occasions</p>
+        </div>
+        <div class="info-card">
+          <div class="icon">🎨</div>
+          <h3>Creative Design</h3>
+          <p>Custom themes and décor tailored to your preferences</p>
+        </div>
+        <div class="info-card">
+          <div class="icon">📸</div>
+          <h3>Documentation</h3>
+          <p>Professional photography and videography services</p>
+        </div>
+        <div class="info-card">
+          <div class="icon">⭐</div>
+          <h3>Expert Team</h3>
+          <p>Experienced coordinators and vendors for seamless execution</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+      <h2>📸 Photo Gallery</h2>
+      <p class="gallery-desc">Scroll to see highlights from our recent events</p>
+      <div class="gallery-grid">
+        <!-- Replace src with your image paths. Store images in /images folder -->
+        <div class="gallery-item">
+          <img src="images/event1.jpg" alt="Event 1">
+        </div>
+        <div class="gallery-item">
+          <img src="images/event2.jpg" alt="Event 2">
+        </div>
+        <div class="gallery-item">
+          <img src="images/event3.jpg" alt="Event 3">
+        </div>
+        <div class="gallery-item">
+          <img src="images/event4.jpg" alt="Event 4">
+        </div>
+        <div class="gallery-item">
+          <img src="images/event5.jpg" alt="Event 5">
+        </div>
+        <div class="gallery-item">
+          <img src="images/event6.jpg" alt="Event 6">
+        </div>
+      </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section class="video-section" id="videos">
+      <h2>🎥 Event Highlights</h2>
+      <div class="video-grid">
+        <!-- Replace VIDEO_ID with actual YouTube video IDs -->
+        <div class="video-card">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-info">
+            <h3>Wedding Ceremony 2024</h3>
+            <p>Beautiful outdoor celebration with friends and family</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-info">
+            <h3>Birthday Celebration</h3>
+            <p>Vibrant party with decorations and entertainment</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-info">
+            <h3>Corporate Event</h3>
+            <p>Professional gathering with networking and awards</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <h2>📞 Get in Touch</h2>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="contact-icon">📱</div>
+          <div>
+            <strong>Phone</strong>
+            <p>+91 XXXX XXX XXX</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <strong>Email</strong>
+            <p>info@jashevents.com</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <strong>Location</strong>
+            <p>Noida/Delhi NCR, India</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <strong>Hours</strong>
+            <p>24/7 for inquiries</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-section" id="booking">
+      <h2>Ready to Plan Your Event?</h2>
+      <p>Contact us today for a consultation. Let's create something amazing together!</p>
+      <a href="mailto:info@jashevents.com?subject=Event Booking Inquiry" class="cta-button">Send Inquiry</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2024 Jash Events. All rights reserved. | Professional Event Coordination & Management</p>
+    </footer>
+  </div>
+</body>
+</html>

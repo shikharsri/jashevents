@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Static marketing site for **Jash Events** (event coordination, anchoring, theatre) in Noida / Delhi NCR. Deployed via GitHub Pages at `jashevents.co.in` (see `CNAME`).
+Static marketing site for **Jash Events** (event coordination, anchoring, theatre) based in Lucknow, serving events across India and internationally. Deployed via GitHub Pages at `jashevents.co.in` (see `CNAME`).
 
 ## Structure
 - `index.html` — the entire site: inline `<style>` and `<script>`, no build step, no dependencies (only Google Fonts and the YouTube embed load externally).
@@ -23,6 +23,7 @@ Static marketing site for **Jash Events** (event coordination, anchoring, theatr
 ## Business facts (source of truth)
 - Phone / WhatsApp: +91 87268 62888 (`tel:+918726862888`, `wa.me/918726862888`)
 - Email: srivastavakapil28@gmail.com
+- Office: Lucknow — https://maps.app.goo.gl/Eg2w5JGR1kBEotR38. Events are taken all over India and internationally (do not describe as Noida/NCR-only; the Noida mention in the theatre section is just the past show venue).
 - Instagram: `jash_events_coordinator`
 - YouTube: https://youtu.be/rkxGrDbXI3A (video ID `rkxGrDbXI3A`)
 - Founder / director: Kapil Srivastava. Theatre wing: Jash Theater Group.

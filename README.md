@@ -1,6 +1,6 @@
 # Jash Events
 
-Website for Jash Events — event coordination, anchoring and theatre in Noida / Delhi NCR.
+Website for Jash Events — event coordination, anchoring and theatre based in Lucknow, serving events across India and internationally.
 Live at https://jashevents.co.in
 
 ## Local preview

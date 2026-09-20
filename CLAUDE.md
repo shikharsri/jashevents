@@ -22,7 +22,7 @@ Static marketing site for **Jash Events** (event coordination, anchoring, theatr
 
 ## Business facts (source of truth)
 - Phone / WhatsApp: +91 87268 62888 (`tel:+918726862888`, `wa.me/918726862888`)
-- Email: srivastavakapil28@gmail.com
+- Email: jasheventscoordinator@gmail.com
 - Office: Lucknow — https://maps.app.goo.gl/Eg2w5JGR1kBEotR38. Events are taken all over India and internationally (do not describe as Noida/NCR-only; the Noida mention in the theatre section is just the past show venue).
 - Instagram: `jash_events_coordinator`
 - YouTube: https://youtu.be/rkxGrDbXI3A (video ID `rkxGrDbXI3A`)

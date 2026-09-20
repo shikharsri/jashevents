@@ -6,6 +6,7 @@ Static marketing site for **Jash Events** (event coordination, anchoring, theatr
 - `index.html` — the entire site: inline `<style>` and `<script>`, no build step, no dependencies (only Google Fonts and the YouTube embed load externally).
 - `images/` — event photos and posters, referenced by relative path from `index.html`.
 - `CNAME` — custom domain for GitHub Pages. Do not edit or delete.
+- `favicon.svg` (+ PNG fallbacks) — "JE" gold-on-purple tab icon; edit the SVG and regenerate the PNGs if changed.
 - `preview.sh` — local dev server.
 
 ## Commands

@@ -16,6 +16,7 @@ Requires Python 3 (preinstalled on macOS/Linux). Or run `python3 -m http.server`
 | `index.html` | Whole site (HTML, CSS, JS inline) |
 | `images/` | Photos and posters |
 | `CNAME` | GitHub Pages custom domain |
+| `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png` | Browser tab / home-screen icon ("JE" monogram) |
 | `preview.sh` | Local dev server |
 | `CLAUDE.md` | Guidance for Claude Code |
 
